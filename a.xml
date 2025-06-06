@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<docs>
+  <assembly>
+    <name>RetailDatabaseManager</name>
+  </assembly>
+  <members>
+    <member name="T:RetailDatabaseManager.Program">
+      <summary>
+      Основной класс программы, содержащий точку входа.
+      </summary>
+    </member>
+    <member name="M:RetailDatabaseManager.Program.Main(System.String[])">
+      <summary>
+      Точка входа в программу. Создает экземпляр DatabaseManager и запускает основной цикл программы.
+      </summary>
+      <param name="args">Аргументы командной строки (не используются).</param>
+    </member>
+
+    <member name="T:RetailDatabaseManager.DatabaseManager">
+      <summary>
+      Основной класс для управления базой данных, загруженной из Excel-файла.
+      Обеспечивает функциональность для просмотра, редактирования и анализа данных.
+      </summary>
+    </member>
+    <member name="M:RetailDatabaseManager.DatabaseManager.#ctor">
+      <summary>
+      Инициализирует новый экземпляр класса DatabaseManager.
+      </summary>
+    </member>
+    <member name="P:RetailDatabaseManager.DatabaseManager.Logger">
+      <summary>
+      Получает экземпляр логгера для записи операций.
+      </summary>
+    </member>
+    <member name="M:RetailDatabaseManager.DatabaseManager.LoadDatabase(System.String)">
+      <summary>
+      Загружает данные из Excel-файла в память.
+      </summary>
+      <param name="filePath">Путь к Excel-файлу.</param>
+      <exception cref="System.Exception">Возникает при ошибке загрузки данных.</exception>
+    </member>
+    <member name="M:RetailDatabaseManager.DatabaseManager.ShowMainMenu">
+      <summary>
+      Отображает главное меню программы и обрабатывает выбор пользователя.
+      </summary>
+    </member>
+    <member name="M:RetailDatabaseManager.DatabaseManager.ShowViewMenu">
+      <summary>
+      Отображает меню просмотра данных и обрабатывает выбор пользователя.
+      </summary>
+    </member>
+    <member name="M:RetailDatabaseManager.DatabaseManager.ShowEditMenu">
+      <summary>
+      Отображает меню редактирования данных и обрабатывает выбор пользователя.
+      </summary>
+    </member>
+    <member name="M:RetailDatabaseManager.DatabaseManager.ViewData(System.String)">
+      <summary>
+      Отображает данные из указанного листа.
+      </summary>
+      <param name="sheetName">Название листа для отображения.</param>
+    </member>
+    <member name="M:RetailDatabaseManager.DatabaseManager.AddRecordMenu">
+      <summary>
+      Обрабатывает процесс добавления новой записи в выбранный лист.
+      </summary>
+    </member>
+    <member name="M:RetailDatabaseManager.DatabaseManager.EditRecordMenu">
+      <summary>
+      Обрабатывает процесс редактирования существующей записи в выбранном листе.
+      </summary>
+    </member>
+    <member name="M:RetailDatabaseManager.DatabaseManager.DeleteRecordMenu">
+      <summary>
+      Обрабатывает процесс удаления записи из выбранного листа.
+      </summary>
+    </member>
+    <member name="M:RetailDatabaseManager.DatabaseManager.ExecuteQueries">
+      <summary>
+      Отображает меню запросов и обрабатывает выбор пользователя.
+      </summary>
+    </member>
+    <member name="M:RetailDatabaseManager.DatabaseManager.QueryTopSellingProducts">
+      <summary>
+      Выполняет запрос для получения топ-5 самых продаваемых товаров.
+      </summary>
+    </member>
+    <member name="M:RetailDatabaseManager.DatabaseManager.QueryMostDiscountedProducts">
+      <summary>
+      Выполняет запрос для получения товаров с наибольшей скидкой.
+      </summary>
+    </member>
+    <member name="M:RetailDatabaseManager.DatabaseManager.QuerySalesByStores">
+      <summary>
+      Выполняет запрос для получения информации о продажах по магазинам.
+      </summary>
+    </member>
+    <member name="M:RetailDatabaseManager.DatabaseManager.QueryProductsWithoutSales">
+      <summary>
+      Выполняет запрос для получения товаров, которые не продавались.
+      </summary>
+    </member>
+
+    <member name="T:RetailDatabaseManager.Logger">
+      <summary>
+      Класс для логирования операций программы.
+      </summary>
+    </member>
+    <member name="M:RetailDatabaseManager.Logger.#ctor(System.String)">
+      <summary>
+      Инициализирует новый экземпляр класса Logger.
+      </summary>
+      <param name="logFilePath">Путь к файлу лога.</param>
+    </member>
+    <member name="M:RetailDatabaseManager.Logger.Log(System.String)">
+      <summary>
+      Записывает сообщение в лог-файл.
+      </summary>
+      <param name="message">Сообщение для записи в лог.</param>
+    </member>
+  </members>
+</docs>
